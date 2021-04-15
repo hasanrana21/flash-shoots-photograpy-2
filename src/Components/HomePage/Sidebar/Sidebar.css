@@ -1,0 +1,12 @@
+.side-bar {
+    background-color: #b61924;
+    height: 100vh;
+}
+.side-bar ul li{
+    list-style: none;
+    padding: 20px 0;
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 600;
+
+}

@@ -1,0 +1,8 @@
+.contact-form input{
+    width: 95%;
+    margin-right: 0;
+}
+.contact-form-area textarea{
+    width: 97.5%;
+    padding: 15px;
+}

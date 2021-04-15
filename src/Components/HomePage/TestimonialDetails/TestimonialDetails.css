@@ -1,0 +1,12 @@
+.testimonial-card {
+    box-shadow: 5px 5px 15px lightgrey;
+    border-radius: 8px;
+    width: 28%;
+    height: 100%;
+    padding: 20px;
+    margin: 2%;
+}
+.testimonial-image img{
+    width: 35%;
+    margin-bottom: 15px;
+}
