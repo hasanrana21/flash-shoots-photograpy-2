@@ -6,8 +6,9 @@ import {
   Link
 } from "react-router-dom";
 import './App.css';
-import Footer from "./Components/HomePage/Footer/Footer";
-import Header from "./Components/HomePage/Header/Header";
+import Admin from "./Components/AdminPage/Admin/Admin";
+import Footer from "./Components/Shared/Footer/Footer";
+import Header from "./Components/Shared/Header/Header";
 import Home from "./Components/HomePage/Home/Home";
 import Order from "./Components/HomePage/Order/Order";
 import Login from "./Components/PrivateLoginSystem/Login/Login";
@@ -21,6 +22,7 @@ function App() {
       <h3>{loggedInUser.email}</h3>
           <Header></Header>
           <Switch>
+
             <Route exact path="/"> 
               <Home></Home>
             </Route>
@@ -30,6 +32,11 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
+            <Route path="/admin">
+              <Admin></Admin>
+            </Route>
+            
+
           </Switch>
           
           <Footer></Footer>

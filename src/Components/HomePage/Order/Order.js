@@ -11,7 +11,7 @@ const Order = () => {
             <div className="col-md-2">
                 <Sidebar></Sidebar>
             </div>
-            <div className="col-md-10">
+            <div className="col-md-10 p-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input name="name" type="text" ref={register({ required: true })} />
                     {errors.exampleRequired && <span>This field is required</span>}

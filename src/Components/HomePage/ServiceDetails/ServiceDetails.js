@@ -10,7 +10,7 @@ const ServiceDetails = ({service}) => {
                     <img src={service.image} alt=""/>
                 </div>
                 <h4>{service.name}</h4>
-                <h6>{service.price}</h6>
+                <h5>TK.{service.price}/=</h5>
             </div>
             <div className="service-card-package">
                 <p>{service.packageInfo1}</p>

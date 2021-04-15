@@ -1,0 +1,14 @@
+.admin-sidebar{
+    background-color: #5da9dd;
+    padding: 20px 55px;
+    height: 100vh;
+}
+.admin-sidebar button{
+    margin: 20px 0;
+    color: #6e090f;
+    font-size: 18px;
+    font-weight: 500;
+}
+.admin-content{
+    padding: 45px 25px;
+}

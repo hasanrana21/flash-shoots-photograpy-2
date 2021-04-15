@@ -26,6 +26,7 @@ const Login = () => {
             var user = result.user;
             setGoogleSignIn(user);
             setLoggedInUser(user);
+            history.replace(from);
         }).catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
