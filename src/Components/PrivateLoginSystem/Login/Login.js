@@ -24,6 +24,7 @@ const Login = () => {
             var credential = result.credential;
             var token = credential.accessToken;
             var user = result.user;
+            console.log(user);
             setGoogleSignIn(user);
             setLoggedInUser(user);
             history.replace(from);

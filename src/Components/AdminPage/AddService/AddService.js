@@ -62,19 +62,19 @@ const AddService = () => {
                         {errors.price && <span>This field is required</span>}
                         
                         <label htmlFor="packageInfo1">Package Info</label>
-                        <input name="packageInfo1" onBlur={handleAddServiceData} ref={register({ required: true })} />
+                        <input name="packageInfo1" onBlur={handleAddServiceData} ref={register}/>
 
                         <label htmlFor="packageInfo2">Package Info</label>
-                        <input name="packageInfo2" onBlur={handleAddServiceData} ref={register({ required: true })} />
+                        <input name="packageInfo2" onBlur={handleAddServiceData} ref={register}/>
 
                         <label htmlFor="packageInfo3">Package Info</label>
-                        <input name="packageInfo3" onBlur={handleAddServiceData} ref={register({ required: true })} />
+                        <input name="packageInfo3" onBlur={handleAddServiceData} ref={register}/>
 
                         <label htmlFor="packageInfo4">Package Info</label>
-                        <input name="packageInfo4" onBlur={handleAddServiceData} ref={register({ required: true })} />
+                        <input name="packageInfo4" onBlur={handleAddServiceData} ref={register}/>
 
                         <label htmlFor="packageInfo5">Package Info</label>
-                        <input name="packageInfo5" onBlur={handleAddServiceData} ref={register({ required: true })} />
+                        <input name="packageInfo5" onBlur={handleAddServiceData} ref={register}/>
                         
                         <label htmlFor="image">Upload Image</label>
                         <input name="image" type="file" onChange={uploadServiceImage} ref={register({ required: true })} />

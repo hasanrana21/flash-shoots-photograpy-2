@@ -1,0 +1,11 @@
+.order-placed-tab{
+    background-color: #5da9dd;
+    padding: 30px 60px;
+    height: 100vh;
+}
+.order-placed-tab button{
+    margin: 15px 0;
+    font-size: 18px;
+    color: #6c2522;
+    font-weight: 600;
+}

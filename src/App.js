@@ -10,8 +10,8 @@ import Admin from "./Components/AdminPage/Admin/Admin";
 import Footer from "./Components/Shared/Footer/Footer";
 import Header from "./Components/Shared/Header/Header";
 import Home from "./Components/HomePage/Home/Home";
-import Order from "./Components/HomePage/Order/Order";
 import Login from "./Components/PrivateLoginSystem/Login/Login";
+import PlacedOrder from "./Components/PlacedOrderPage/PlacedOrder/PlacedOrder";
 
 export const UserContext = createContext();
 function App() {
@@ -26,8 +26,8 @@ function App() {
             <Route exact path="/"> 
               <Home></Home>
             </Route>
-            <Route path="/order">
-              <Order></Order>
+            <Route path="/placedOrder/:id">
+              <PlacedOrder></PlacedOrder>
             </Route>
             <Route path="/login">
               <Login></Login>

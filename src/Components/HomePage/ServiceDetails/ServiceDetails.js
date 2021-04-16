@@ -4,7 +4,7 @@ import './ServiceDetails.css';
 
 const ServiceDetails = ({service}) => {
     return (
-        <div className="col-md-4 services-card mx-auto p-4">
+        <div className="col-md-4 col-sm-12 services-card p-4">
             <div className="services-card-title">
                 <div className="services-title-image">
                     <img src={service.image} alt=""/>
@@ -19,7 +19,7 @@ const ServiceDetails = ({service}) => {
                 <p>{service.packageInfo4}</p>
                 <p>{service.packageInfo5}</p>
 
-                <Link to="/order">
+                <Link to={`/placedOrder/${service._id}`}>
                     <button className="btn primary-button">Book</button>
                 </Link>
             </div>

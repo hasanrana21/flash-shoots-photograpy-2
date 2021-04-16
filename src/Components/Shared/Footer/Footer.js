@@ -6,7 +6,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="row container-fluid pt-5 footer-section">
+        <div className="row pt-5 footer-section">
             <div className="col-md-4">
                 <h1>Flash Shoots</h1>
             </div>

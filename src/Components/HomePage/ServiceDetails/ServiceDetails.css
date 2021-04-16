@@ -1,5 +1,6 @@
 .services-card{
     width: 30%;
+    margin: 20px;
     box-shadow: 5px 5px 15px lightgrey;
     border-radius: 12px;
     transition: .3s;
