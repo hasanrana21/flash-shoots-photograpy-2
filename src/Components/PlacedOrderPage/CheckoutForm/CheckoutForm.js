@@ -33,7 +33,7 @@ const useOptions = () => {
   return options;
 };
 
-const CheckoutForm = () => {
+const CheckoutForm = ({successfulPayments}) => {
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
@@ -61,6 +61,7 @@ const CheckoutForm = () => {
       console.log('[PaymentMethod]', paymentMethod);
       setSuccessPayment(paymentMethod.id)
       setPaymentError(null);
+      successfulPayments();
     }
   };
 

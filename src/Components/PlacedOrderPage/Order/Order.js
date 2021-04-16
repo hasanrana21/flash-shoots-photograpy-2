@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
 import { UserContext } from '../../../App';
@@ -16,12 +16,34 @@ const stripePromise = loadStripe('pk_test_51IeMbLFqESutX7DvfiS6y1E5yW1WEfveAw4v2
 
 const Order = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [order, setOrder] = useState(null)
     const {id} = useParams();
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+        setOrder(data);
+    };
+
+    const handlePaymentSuccessfully = paymentId => {
+        const orderData = {
+            name: order.name,
+            email: order.email,
+            price: order.price,
+            paymentId,
+        }
+        fetch('http://localhost:8050/addOrder', {
+            method: 'POST',
+            headers: {'Content-Type' : 'Application/json'},
+            body: JSON.stringify(orderData)
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result);
+        })
+    }
     return (
         <div className="p-5 row order">
-            <div className="col-md-6">
+            <div className="col-md-6" style={{display: order ? 'none' : 'block'}}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="order-form">
                             <input name="name" type="text" defaultValue={loggedInUser.displayName} placeholder="Your Name" ref={register} />
@@ -34,10 +56,10 @@ const Order = () => {
                 </form>
             </div>
 
-            <div className="col-md-6 ps-5">
+            <div className="col-md-6 ps-5" style={{display: order ? 'block' : 'none'}}>
                 <h6>Pay With</h6>
                 <Elements stripe={stripePromise}>
-                    <CheckoutForm></CheckoutForm>
+                    <CheckoutForm successfulPayments={handlePaymentSuccessfully}></CheckoutForm>
                 </Elements>
             </div>
         </div>
