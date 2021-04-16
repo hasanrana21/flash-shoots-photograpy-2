@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AddService from '../AddService/AddService';
-import AdminSidebar from '../AdminSidebar/AdminSidebar';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageServices from '../ManageServices/ManageServices';
 import OrderedList from '../OrderedList/OrderedList';
 import './Admin.css';
 
 const Admin = () => {
+    const [allOrderedList, setAllOrderedList] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8050/getOrdered')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setAllOrderedList(data);
+        })
+    }, [])
     return (
         <div className="d-flex align-items-start">
             <div className="nav flex-column nav-pills me-3 admin-sidebar" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -20,7 +29,7 @@ const Admin = () => {
             </div>
 
             <div className="tab-content admin-content" id="v-pills-tabContent">
-                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <OrderedList></OrderedList> </div>
+                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <OrderedList allOrderedList={allOrderedList}></OrderedList> </div>
 
                 <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> <AddService></AddService> </div>
 

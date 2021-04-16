@@ -1,0 +1,11 @@
+.admin-ordered-list{
+    width: 950px;
+    padding-right: 15px;
+}
+.admin-ordered-title{
+    background-color: lightgray;
+    color: gray;
+    padding: 10px 0px;
+    padding-right: 10px;
+    border-radius: 10px;
+}

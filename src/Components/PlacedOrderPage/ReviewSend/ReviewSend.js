@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { UserContext } from '../../../App';
 import './ReviewSend.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGrinHearts } from '@fortawesome/free-solid-svg-icons';
 
 const ReviewSend = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -58,7 +60,7 @@ const ReviewSend = () => {
                 </div>
                 
                 <div className="text-center">
-                    <button type="submit" className="btn primary-button">Send Love</button>
+                    <button type="submit" className="btn primary-button"> <FontAwesomeIcon icon={faGrinHearts}/> Send Love</button>
                 </div>
             </form> 
         </div>
