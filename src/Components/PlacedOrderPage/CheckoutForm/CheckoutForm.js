@@ -61,7 +61,7 @@ const CheckoutForm = ({successfulPayments}) => {
       console.log('[PaymentMethod]', paymentMethod);
       setSuccessPayment(paymentMethod.id)
       setPaymentError(null);
-      successfulPayments();
+      successfulPayments(paymentMethod.id);
     }
   };
 

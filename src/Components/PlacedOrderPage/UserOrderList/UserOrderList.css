@@ -1,0 +1,8 @@
+.user-order-list{
+    margin: 50px 25px;
+    border: 1px solid red;
+    padding: 15px;
+}
+.user-order-list img{
+    width: 70px;
+}

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import Order from '../Order/Order';
 import ReviewSend from '../ReviewSend/ReviewSend';
 import UserOrderList from '../UserOrderList/UserOrderList';
@@ -7,6 +7,19 @@ import './PlacedOrder.css';
 
 
 const PlacedOrder = () => {
+    const {id} = useParams();
+    const [serviceData, setServiceData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8050/getServiceData')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setServiceData(data);
+        })
+    }, [])
+    const userOrdered = serviceData.find(ordered => ordered._id === id);
+    console.log(userOrdered);
     return (
         <div className="d-flex align-items-start">
             <div className="nav flex-column nav-pills me-3 order-placed-tab" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -18,9 +31,9 @@ const PlacedOrder = () => {
             </div>
 
             <div className="tab-content" id="v-pills-tabContent">
-                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <Order></Order> </div>
+                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <Order userOrdered={userOrdered}></Order> </div>
 
-                <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> <UserOrderList></UserOrderList> </div>
+                <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> <UserOrderList userOrdered={userOrdered}></UserOrderList> </div>
 
                 <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"> <ReviewSend></ReviewSend> </div>
             </div>

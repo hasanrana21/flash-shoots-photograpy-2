@@ -14,7 +14,7 @@ import {loadStripe} from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_test_51IeMbLFqESutX7DvfiS6y1E5yW1WEfveAw4v2p0M78kbdvzaiu3eA9OxwUYMEQagK7L62TJD1OpEUPM0jWcPJ99A00Ujn7nKli');
 
 
-const Order = () => {
+const Order = ({userOrdered}) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [order, setOrder] = useState(null)
     const {id} = useParams();
@@ -30,6 +30,12 @@ const Order = () => {
             email: order.email,
             price: order.price,
             paymentId,
+            serviceName: userOrdered.name,
+            servicePrice: userOrdered.price,
+            serviceImage: userOrdered.image,
+            servicePackage1: userOrdered.packageInfo1,
+            servicePackage2: userOrdered.packageInfo2,
+            servicePackage3: userOrdered.packageInfo3,
         }
         fetch('http://localhost:8050/addOrder', {
             method: 'POST',
