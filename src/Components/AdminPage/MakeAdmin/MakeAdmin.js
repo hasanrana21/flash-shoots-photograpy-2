@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './MakeAdmin.css';
 
 const MakeAdmin = () => {
+    const [addAdmin, setAddAdmin] = useState(null);
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
 
-        fetch('')
+        fetch('http://localhost:8050/addAdmin', {
+            method: 'POST',
+            headers: {'Content-Type' : 'Application/json'},
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(item => {
+            console.log(item);
+            setAddAdmin(item)
+        })
     };
     return (
         <div>
@@ -22,6 +32,9 @@ const MakeAdmin = () => {
                         <button type="submit" className="btn primary-button">ADD ADMIN</button>
                     </div>
             </form>
+            {
+                addAdmin && <p style={{color: 'green', textAlign: 'center', padding: '20px 0px'}}>Admin Added Successfully</p>
+            }
         </div>
     );
 };

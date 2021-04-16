@@ -6,6 +6,8 @@ import {
   CardCvcElement,
   CardExpiryElement
 } from "@stripe/react-stripe-js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 
 
 const useOptions = () => {
@@ -133,7 +135,7 @@ const CheckoutForm = ({successfulPayments}) => {
         paymentError && <p style={{color: 'red'}}>{paymentError}</p>
       }
       {
-        successPayment && <p style={{color: 'green'}}>Your Payment Successfully Done</p>
+        successPayment && <p style={{color: 'green'}}> <FontAwesomeIcon icon={faHandshake}/> Thank You!! Your Payment Successfully Done</p>
       }
     </>
   );
