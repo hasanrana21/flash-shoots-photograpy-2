@@ -35,7 +35,7 @@ const Admin = () => {
 
                 <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"> <MakeAdmin></MakeAdmin> </div>
 
-                <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"> <ManageServices></ManageServices> </div>
+                <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"> <ManageServices allOrderedList={allOrderedList}></ManageServices> </div>
             </div>
         </div>
     );

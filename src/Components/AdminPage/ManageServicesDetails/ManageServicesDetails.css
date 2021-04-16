@@ -1,0 +1,9 @@
+.manage-service-list h5{
+    padding: 15px 0;
+    color: gray;
+}
+.action-icon span{
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 8px;
+}

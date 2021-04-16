@@ -1,0 +1,10 @@
+.manage-services{
+    width: 900px;
+}
+.manage-services-title{
+    background-color: lightgray;
+    color: #3a3939;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
