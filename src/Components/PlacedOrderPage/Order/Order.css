@@ -1,5 +1,8 @@
+.order{
+  width: 1000px;
+}
 .order-form{
-  width: 500px;
+  width: 400px;
 }
 input {
     display: block;

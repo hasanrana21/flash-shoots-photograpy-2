@@ -1,6 +1,9 @@
 import React from 'react';
 import banner2 from '../../../images/banner2.jpg';
 import './Banner.css';
+import banner3 from '../../../images/banner3.jpeg';
+import banner4 from '../../../images/banner4.jpg';
+import banner5 from '../../../images/banner5.jpg';
 
 ;const Banner = () => {
     return (
@@ -13,7 +16,7 @@ import './Banner.css';
             <div className="carousel-inner">
                 <div className="carousel-item active">
                     <div className="slider-image">
-                        <img src={banner2} className="d-block w-100" alt="..."/>
+                        <img src={banner3} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
@@ -22,7 +25,7 @@ import './Banner.css';
                 </div>
                 <div className="carousel-item">
                     <div className="slider-image">
-                        <img src={banner2} className="d-block w-100" alt="..."/>
+                        <img src={banner4} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
@@ -31,7 +34,7 @@ import './Banner.css';
                 </div>
                 <div className="carousel-item">
                     <div className="slider-image">
-                        <img src={banner2} className="d-block w-100" alt="..."/>
+                        <img src={banner5} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Third slide label</h5>

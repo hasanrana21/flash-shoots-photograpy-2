@@ -5,11 +5,11 @@ import './Header.css';
 const Header = () => {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid px-5">
+            <nav className="navbar navbar-expand-md navbar-light">
+                <div className="container-fluid px-5 menubar-area">
                     <Link to="/" className="navbar-brand"><h1>Flash Shoots</h1></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav menu">

@@ -30,7 +30,7 @@ const Footer = () => {
 
             <div className="text-center pt-4 owner">
                 <p>Designer & Developer</p>
-                <h5>Hasan</h5>
+                <h5 style={{letterSpacing: '5px', paddingTop: '5px'}}>Hasan</h5>
             </div>
             <p className="text-center copyright pt-3"><small>&copy; 2021 Hasan || All right reserved</small></p>
         </div>
