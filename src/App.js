@@ -12,6 +12,7 @@ import Header from "./Components/Shared/Header/Header";
 import Home from "./Components/HomePage/Home/Home";
 import Login from "./Components/PrivateLoginSystem/Login/Login";
 import PlacedOrder from "./Components/PlacedOrderPage/PlacedOrder/PlacedOrder";
+import PrivateRoute from "./Components/PrivateLoginSystem/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 function App() {
@@ -25,15 +26,15 @@ function App() {
             <Route exact path="/"> 
               <Home></Home>
             </Route>
-            <Route path="/placedOrder/:id">
+            <PrivateRoute path="/placedOrder/:price">
               <PlacedOrder></PlacedOrder>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/admin">
+            <PrivateRoute path="/admin">
               <Admin></Admin>
-            </Route>
+            </PrivateRoute>
             
 
           </Switch>

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { UserContext } from '../../../App';
 import './MakeAdmin.css';
 
 const MakeAdmin = () => {
     const [addAdmin, setAddAdmin] = useState(null);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
         console.log(data);

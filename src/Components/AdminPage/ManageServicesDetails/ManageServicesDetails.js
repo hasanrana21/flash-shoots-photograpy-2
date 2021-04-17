@@ -9,11 +9,11 @@ const ManageServicesDetails = ({manageService}) => {
     const handleDeleteService = deleteId => {
         console.log(deleteId)
 
-        // fetch('http://localhost:8050/getServiceData/' + deleteId, {
-        //     method: 'DELETE',
-        // })
-        // .then(res => res.json())
-        // .then(res => console.log(res))
+        fetch('http://localhost:8050/delete/' + deleteId, {
+            method: 'DELETE',
+        })
+        .then(res => res.json())
+        .then(res => console.log(res))
     }
     return (
         <div className="row ps-3 manage-service-list">

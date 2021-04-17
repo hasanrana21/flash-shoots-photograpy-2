@@ -19,7 +19,7 @@ const ServiceDetails = ({service}) => {
                 <p>{service.packageInfo4}</p>
                 <p>{service.packageInfo5}</p>
 
-                <Link to={`/placedOrder/${service._id}`}>
+                <Link to={`/placedOrder/${service.price}`}>
                     <button className="btn primary-button">Book</button>
                 </Link>
             </div>

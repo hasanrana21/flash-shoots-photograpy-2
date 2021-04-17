@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BookingListDetails from '../BookingListDetails/BookingListDetails';
 import './BookingList.css';
 
-const BookingList = (props) => {
-    // const { name, image, price, packageInfo1, packageInfo2, packageInfo3 } = props.userOrdered || {};
+const BookingList = () => {
     const [userOrderList, setUserOrderList] = useState([]);
 
     useEffect(() => {

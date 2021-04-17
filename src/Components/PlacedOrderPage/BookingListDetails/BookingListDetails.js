@@ -4,14 +4,12 @@ import './BookingListDetails.css';
 const BookingListDetails = (props) => {
     console.log(props.userOrder);
     const { serviceName, serviceImage, price, servicePackage1, servicePackage2, servicePackage3, status } = props.userOrder;
-    // if(status === "Pending"){
-        
-    // }
+    
     return (
         <div className="col-md-4 user-order">
-            <div className="user-order-list d-flex justify-content-between">
+        <h6>{serviceName}</h6>
+            <div className="user-order-list d-flex justify-content-between align-items-center">
                 <div>
-                    <h6>{serviceName}</h6>
                     <img src={serviceImage} alt=""/>
                     <h5 className="py-2">TK.{price}/=</h5>
                 </div>

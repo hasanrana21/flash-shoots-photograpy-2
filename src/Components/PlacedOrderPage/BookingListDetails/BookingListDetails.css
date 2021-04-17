@@ -2,11 +2,21 @@
     width: 30%;
     margin-left: 25px;
     margin-bottom: 25px;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px gray;
 }
 .user-order-list img{
     width: 70px;
     margin: 15px 0;
+}
+.status{
+    background-color: green;
+    color: #fff;
+    box-shadow: 2px 2px 8px lightgray;
+    font-weight: 400;
+    height: 40px;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 18px;
 }

@@ -21,7 +21,7 @@ const Header = () => {
                             <Link to="/contact" className="nav-link"><h6>Contact</h6></Link>
                             <Link to="/login" className="nav-link"><h6>Login</h6></Link>
                             <Link to="/admin" className="nav-link"><h6>Admin</h6></Link>
-                            <Link to="/admin" className="nav-link"><h6 style={{fontWeight: '700', color: '#5da9dd'}}>{loggedInUser.displayName}</h6></Link>
+                            <Link to="/admin" className="nav-link"><h6 style={{fontWeight: '700', color: '#0d6efd'}}>{loggedInUser.displayName}</h6></Link>
                         </div>
                     </div>
                 </div>

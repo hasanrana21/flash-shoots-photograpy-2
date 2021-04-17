@@ -30,9 +30,9 @@ const OrderedListDetails = ({allOrder}) => {
                 <form>
                     <select onChange={handleChangeStatus} className="form-select mt-2" id="validationCustom04">
                         <option value="Select">Select Status</option>
-                        <option value="Pending">Pending</option>
-                        <option value="Ongoing">OnGoing</option>
-                        <option value="Done">Done</option>
+                        <option value="Pending" style={{color: 'red'}}>Pending</option>
+                        <option value="Ongoing" style={{color: 'goldenrod'}}>OnGoing</option>
+                        <option value="Done" style={{color: 'green'}}>Done</option>
                     </select>
                 </form>
             </div>

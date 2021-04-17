@@ -16,8 +16,8 @@ const stripePromise = loadStripe('pk_test_51IeMbLFqESutX7DvfiS6y1E5yW1WEfveAw4v2
 
 const Booking = ({userOrdered}) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [order, setOrder] = useState(null)
-    const {id} = useParams();
+    const [order, setOrder] = useState(null);
+    const {price} = useParams();
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
@@ -56,7 +56,7 @@ const Booking = ({userOrdered}) => {
                             
                             <input name="email" type="email" defaultValue={loggedInUser.email} placeholder="Your Email" ref={register} />
                             
-                            <input name="price" type="text" defaultValue="" placeholder="Order Price" ref={register} />
+                            <input name="price" type="text" defaultValue={price} placeholder="Order Price" ref={register} />
                         </div>
                         <input type="submit" />
                 </form>

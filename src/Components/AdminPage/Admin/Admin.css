@@ -12,3 +12,12 @@
 .admin-content{
     padding: 45px 25px;
 }
+.admin-page-user{
+    margin-left: 12%;
+    margin-top: 30px;
+}
+.admin-page-user h3{
+    text-align: center;
+    color: #b61924;
+    font-weight: 600;
+}

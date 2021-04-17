@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
+import BookingList from '../../PlacedOrderPage/BookingList/BookingList';
 import AddService from '../AddService/AddService';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageServices from '../ManageServices/ManageServices';
@@ -6,18 +8,40 @@ import OrderedList from '../OrderedList/OrderedList';
 import './Admin.css';
 
 const Admin = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [allOrderedList, setAllOrderedList] = useState([]);
+    const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
         fetch('http://localhost:8050/getOrdered')
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             setAllOrderedList(data);
         })
     }, [])
+
+    useEffect(() => {
+        fetch('http://localhost:8050/getAdmin', {
+            method: 'POST',
+            headers: {'Content-Type' : 'Application/json'},
+            body: JSON.stringify({email: loggedInUser.email})
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result);
+            setIsAdmin(result);
+        })
+    }, [loggedInUser])
+
+    // const adminLoggedIn = isAdmin.find(admin => admin?.email === loggedInUser.email)
+    // console.log(adminLoggedIn);
+    // const forAdmin = adminLoggedIn === loggedInUser.email;
+    // console.log(forAdmin);
     return (
-        <div className="d-flex align-items-start">
+        <>
+        { isAdmin ?
+            <div className="d-flex align-items-start">
             <div className="nav flex-column nav-pills me-3 admin-sidebar" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <button className="nav-link active text-start" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Ordered List</button>
 
@@ -38,6 +62,13 @@ const Admin = () => {
                 <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"> <ManageServices></ManageServices> </div>
             </div>
         </div>
+        : 
+          <div className="admin-page-user">
+              <h3>All Your Booking</h3>
+              <BookingList></BookingList>
+          </div>
+          }
+        </>
     );
 };
 
