@@ -7,9 +7,9 @@ const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div>
-            <nav className="navbar navbar-expand-md navbar-light">
-                <div className="container-fluid px-5 menubar-area">
-                    <Link to="/" className="navbar-brand"><h1>Flash Shoots</h1></Link>
+            <nav className="navbar navbar-expand-md navbar-light menubar-area">
+                <div className="container-fluid px-5">
+                    <Link to="/" className="navbar-brand"><h1 className="menubar-logo">Flash Shoots</h1></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

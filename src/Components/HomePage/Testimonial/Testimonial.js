@@ -14,7 +14,7 @@ const Testimonial = () => {
         <div className="row justify-content-center mb-5">
             <h3 className="text-center">Our Client Says</h3>
             {
-                clientReviews.map(reviews => <TestimonialDetails reviews={reviews}></TestimonialDetails>)
+                clientReviews.map(reviews => <TestimonialDetails reviews={reviews} key={reviews._id}></TestimonialDetails>)
             }
         </div>
     );

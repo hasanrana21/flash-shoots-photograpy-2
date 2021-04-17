@@ -1,8 +1,18 @@
 .menu h6{
     margin-left: 15px;
+    color: white;
+    font-weight: 600;
+}
+.menubar-area{
+    background-color: #5da9dd;
+    padding: 0;
 }
 .menubar-area a{
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
+}
+.menubar-logo{
+    color: gray;
+    font-size: 61px;
 }

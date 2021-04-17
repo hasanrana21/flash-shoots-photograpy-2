@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Order from '../Order/Order';
+import Booking from '../Booking/Booking';
 import ReviewSend from '../ReviewSend/ReviewSend';
-import UserOrderList from '../UserOrderList/UserOrderList';
 import './PlacedOrder.css';
+import BookingList from '../BookingList/BookingList';
 
 
 const PlacedOrder = () => {
@@ -31,9 +31,9 @@ const PlacedOrder = () => {
             </div>
 
             <div className="tab-content" id="v-pills-tabContent">
-                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <Order userOrdered={userOrdered}></Order> </div>
+                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <Booking userOrdered={userOrdered}></Booking> </div>
 
-                <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> <UserOrderList userOrdered={userOrdered}></UserOrderList> </div>
+                <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> <BookingList userOrdered={userOrdered}></BookingList> </div>
 
                 <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"> <ReviewSend></ReviewSend> </div>
             </div>

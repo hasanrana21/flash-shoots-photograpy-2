@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useParams } from 'react-router';
 import { UserContext } from '../../../App';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
-import './Order.css';
+import './Booking.css';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 
@@ -14,7 +14,7 @@ import {loadStripe} from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_test_51IeMbLFqESutX7DvfiS6y1E5yW1WEfveAw4v2p0M78kbdvzaiu3eA9OxwUYMEQagK7L62TJD1OpEUPM0jWcPJ99A00Ujn7nKli');
 
 
-const Order = ({userOrdered}) => {
+const Booking = ({userOrdered}) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [order, setOrder] = useState(null)
     const {id} = useParams();
@@ -72,4 +72,4 @@ const Order = ({userOrdered}) => {
     );
 };
 
-export default Order;
+export default Booking;

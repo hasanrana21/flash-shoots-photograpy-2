@@ -5,7 +5,7 @@ import aboutPic from '../../../images/aboutUsPhoto.jpg';
 const About = () => {
     return (
         <div className="row my-5 py-5 align-items-center">
-            <h2 className="text-center py-5">ABOUT US</h2>
+            <h2 className="text-center pb-5">ABOUT US</h2>
             <div className="col-md-6 about-image">
                 <img src={aboutPic} alt=""/>
             </div>

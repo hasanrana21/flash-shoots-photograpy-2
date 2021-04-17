@@ -4,7 +4,7 @@ import './MakeAdmin.css';
 
 const MakeAdmin = () => {
     const [addAdmin, setAddAdmin] = useState(null);
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
         console.log(data);
 
@@ -25,7 +25,8 @@ const MakeAdmin = () => {
                     <div className="admin-form">
                         <input name="name" type="text" placeholder="Your Name" ref={register} />
                         
-                        <input name="email" type="email" placeholder="Your Email" ref={register} />
+                        <input name="email" type="email" placeholder="Your Email" ref={register({ required: true })} />
+                        {errors.email && <span>This field is required</span>}
                     </div>
                     
                     <div className="mt-3 text-center">

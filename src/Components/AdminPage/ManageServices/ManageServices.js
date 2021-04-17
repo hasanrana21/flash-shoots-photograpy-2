@@ -11,7 +11,7 @@ const ManageServices = ({allOrderedList}) => {
                 <div className="col-md-3"><h5>Action</h5></div>
             </div>
             {
-                allOrderedList.map(manageService => <ManageServicesDetails manageService={manageService}></ManageServicesDetails>)
+                allOrderedList.map(manageService => <ManageServicesDetails manageService={manageService} key={manageService._id}></ManageServicesDetails>)
             }
         </div>
     );

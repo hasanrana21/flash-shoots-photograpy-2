@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import UserOrderListDetails from '../UserOrderListDetails/UserOrderListDetails';
-import './UserOrderList.css';
+import BookingListDetails from '../BookingListDetails/BookingListDetails';
+import './BookingList.css';
 
-const UserOrderList = (props) => {
+const BookingList = (props) => {
     // const { name, image, price, packageInfo1, packageInfo2, packageInfo3 } = props.userOrdered || {};
     const [userOrderList, setUserOrderList] = useState([]);
 
@@ -17,10 +17,10 @@ const UserOrderList = (props) => {
     return (
             <div className="row user-order-list-area">
                 {
-                    userOrderList.map(userOrder => <UserOrderListDetails userOrder={userOrder}></UserOrderListDetails>)
+                    userOrderList.map(userOrder => <BookingListDetails userOrder={userOrder} key={userOrder._id}></BookingListDetails>)
                 }
             </div>
     );
 };
 
-export default UserOrderList;
+export default BookingList;

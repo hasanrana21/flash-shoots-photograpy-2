@@ -1,9 +1,12 @@
 import React from 'react';
-import './UserOrderListDetails.css';
+import './BookingListDetails.css';
 
-const UserOrderListDetails = (props) => {
+const BookingListDetails = (props) => {
     console.log(props.userOrder);
-    const { serviceName, serviceImage, price, servicePackage1, servicePackage2, servicePackage3 } = props.userOrder;
+    const { serviceName, serviceImage, price, servicePackage1, servicePackage2, servicePackage3, status } = props.userOrder;
+    // if(status === "Pending"){
+        
+    // }
     return (
         <div className="col-md-4 user-order">
             <div className="user-order-list d-flex justify-content-between">
@@ -13,7 +16,7 @@ const UserOrderListDetails = (props) => {
                     <h5 className="py-2">TK.{price}/=</h5>
                 </div>
                 <div className="status">
-                    <p>Pending</p>
+                    <p>{status}</p>
                 </div>
             </div>
             <p><small>{servicePackage1}</small></p>
@@ -23,4 +26,4 @@ const UserOrderListDetails = (props) => {
     );
 };
 
-export default UserOrderListDetails;
+export default BookingListDetails;

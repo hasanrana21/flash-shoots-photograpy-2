@@ -8,12 +8,12 @@ const OrderedList = ({allOrderedList}) => {
             <div className="row admin-ordered-title">
                 <div className="col-md-2"><h5>Name</h5></div>
                 <div className="col-md-4"><h5>Email</h5></div>
-                <div className="col-md-3"><h5>Service</h5></div>
+                <div className="col-md-2"><h5>Service</h5></div>
                 <div className="col-md-2"><h5>Pay With</h5></div>
-                <div className="col-md-1"><h5>Status</h5></div>
+                <div className="col-md-2"><h5>Status</h5></div>
             </div>
             {
-                allOrderedList.map(allOrder => <OrderedListDetails allOrder={allOrder}></OrderedListDetails>)
+                allOrderedList.map(allOrder => <OrderedListDetails allOrder={allOrder} key={allOrder._id}></OrderedListDetails>)
             }
         </div>
     );
