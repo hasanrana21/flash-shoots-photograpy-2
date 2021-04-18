@@ -1,5 +1,7 @@
 .slider-image img{
-    height: 90vh;
+    height: 110vh;
+    position: center;
+    background-size: cover;
 }
 .slider-image{
   position: relative;
