@@ -2,7 +2,7 @@ import React from 'react';
 import './Banner.css';
 import banner1 from '../../../images/banner16.jpg';
 import banner2 from '../../../images/banner14.jpg';
-import banner3 from '../../../images/banner10.jpg';
+import banner3 from '../../../images/banner18.jpg';
 
 ;const Banner = () => {
     return (
@@ -18,7 +18,7 @@ import banner3 from '../../../images/banner10.jpg';
                         <img src={banner1} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-caption banner-text d-none d-md-block">
-                        <h3 style={{marginTop: '-30%'}}>Ready to take your Beyond your Imagination</h3>
+                        <h3 style={{marginTop: '-40%'}}>Ready to take your Beyond your Imagination</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sint officiis tenetur culpa odit praesentium laboriosam magnam nulla, corporis maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iure. </p>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ import banner3 from '../../../images/banner10.jpg';
                         <img src={banner2} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-caption banner-text d-none d-md-block">
-                        <h3 style={{marginTop: '-30%'}}>A Picture is worth a Thousands word</h3>
+                        <h3 style={{marginTop: '-40%'}}>A Picture is worth a Thousands word</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sint officiis tenetur culpa odit praesentium laboriosam magnam nulla, corporis maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iure. </p>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ import banner3 from '../../../images/banner10.jpg';
                         <img src={banner3} className="d-block w-100" alt="..."/>
                     </div>
                     <div className="carousel-caption banner-text d-none d-md-block">
-                        <h3 style={{marginTop: '-30%'}}>Every Moment of your life is Beautiful</h3>
+                        <h3 style={{marginTop: '-40%'}}>Every Moment of your life is Beautiful</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sint officiis tenetur culpa odit praesentium laboriosam magnam nulla, corporis maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iure. </p>
                     </div>
                 </div>
