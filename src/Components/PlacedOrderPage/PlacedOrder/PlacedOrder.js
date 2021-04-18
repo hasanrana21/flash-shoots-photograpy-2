@@ -7,7 +7,7 @@ import BookingList from '../BookingList/BookingList';
 
 
 const PlacedOrder = () => {
-    const {id} = useParams();
+    const {price} = useParams();
     const [serviceData, setServiceData] = useState([]);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const PlacedOrder = () => {
             setServiceData(data);
         })
     }, [])
-    const userOrdered = serviceData.find(ordered => ordered._id === id) || {};
+    const userOrdered = serviceData.find(ordered => ordered.price === price) || {};
     console.log(userOrdered);
     return (
         <div className="d-flex align-items-start">

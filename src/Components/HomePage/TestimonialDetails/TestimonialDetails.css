@@ -7,6 +7,19 @@
     margin: 2%;
 }
 .testimonial-image img{
-    width: 35%;
+    width: 40%;
+    height: 130px;
     margin-bottom: 15px;
+    border-radius: 50%;
 }
+
+@media (max-width: 767.98px) { 
+    .testimonial-card{
+        width: 100%;
+    }
+ }
+@media (max-width: 575.98px) { 
+    .testimonial-card{
+        width: 100%;
+    }
+ }

@@ -2,7 +2,7 @@ import React from 'react';
 import './BookingListDetails.css';
 
 const BookingListDetails = (props) => {
-    console.log(props.userOrder);
+    // console.log(props.userOrder);
     const { serviceName, serviceImage, price, servicePackage1, servicePackage2, servicePackage3, status } = props.userOrder;
     
     return (

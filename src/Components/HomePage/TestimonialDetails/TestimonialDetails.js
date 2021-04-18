@@ -6,7 +6,7 @@ import './TestimonialDetails.css';
 const TestimonialDetails = ({reviews}) => {
     return (
         <div className="col-md-4 testimonial-card">
-            <div className="testimonial-image d-flex justify-content-center">
+            <div className="testimonial-image img-fluid d-flex justify-content-center">
                 <img src={reviews.image} alt=""/>
             </div>
             <div>
