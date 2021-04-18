@@ -55,7 +55,7 @@ const ReviewSend = () => {
                     
                     <input name="email" type="email" placeholder="Your Email" ref={register} />
 
-                    <input name="image" type="file" onChange={handleReviewImage} placeholder="Your Email" ref={register} />
+                    <input name="image" type="file" onChange={handleReviewImage} ref={register} />
                     
                     <textarea name="review" placeholder="Your FeedBack" id="" cols="30" rows="10" ref={register}></textarea>
                 </div>

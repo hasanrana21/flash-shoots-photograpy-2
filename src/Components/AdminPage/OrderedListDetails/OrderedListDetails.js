@@ -25,14 +25,14 @@ const OrderedListDetails = ({allOrder}) => {
             <div className="col-md-2"><p> <small> {allOrder.name} </small> </p></div>
             <div className="col-md-4"><p> <small>{allOrder.email}</small> </p></div>
             <div className="col-md-2"><p> <small>{allOrder.serviceName}</small> </p></div>
-            <div className="col-md-2"><p> <small>Credit Card</small> </p></div>
+            <div className="col-md-2"><p> <small>Credit Card</small></p></div>
             <div className="col-md-2">
                 <form>
-                    <select onChange={handleChangeStatus} className="form-select mt-2" id="validationCustom04">
-                        <option value="Select">Select Status</option>
-                        <option value="Pending" style={{color: 'red'}}>Pending</option>
-                        <option value="Ongoing" style={{color: 'goldenrod'}}>OnGoing</option>
-                        <option value="Done" style={{color: 'green'}}>Done</option>
+                    <select onChange={handleChangeStatus} defaultValue={allOrder.status} className="form-select mt-2" id="validationCustom04">
+                        <option>Select Status</option>
+                        <option style={{color: 'red'}}>Pending</option>
+                        <option style={{color: 'goldenrod'}}>OnGoing</option>
+                        <option style={{color: 'green'}}>Done</option>
                     </select>
                 </form>
             </div>
