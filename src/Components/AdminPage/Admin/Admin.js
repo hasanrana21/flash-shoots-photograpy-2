@@ -13,7 +13,7 @@ const Admin = () => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:8050/getOrdered')
+        fetch('https://peaceful-mesa-78217.herokuapp.com/getOrdered')
         .then(res => res.json())
         .then(data => {
             // console.log(data);
@@ -22,7 +22,7 @@ const Admin = () => {
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:8050/getAdmin', {
+        fetch('https://peaceful-mesa-78217.herokuapp.com/Admin', {
             method: 'POST',
             headers: {'Content-Type' : 'Application/json'},
             body: JSON.stringify({email: loggedInUser.email})
@@ -33,11 +33,7 @@ const Admin = () => {
             setIsAdmin(result);
         })
     }, [loggedInUser])
-
-    // const adminLoggedIn = isAdmin.find(admin => admin?.email === loggedInUser.email)
-    // console.log(adminLoggedIn);
-    // const forAdmin = adminLoggedIn === loggedInUser.email;
-    // console.log(forAdmin);
+    
     return (
         <>
         { isAdmin ?
@@ -53,7 +49,7 @@ const Admin = () => {
             </div>
 
             <div className="tab-content admin-content" id="v-pills-tabContent">
-                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <OrderedList allOrderedList={allOrderedList}></OrderedList> </div>
+                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> <OrderedList></OrderedList> </div>
 
                 <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> <AddService></AddService> </div>
 

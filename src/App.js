@@ -13,6 +13,8 @@ import Home from "./Components/HomePage/Home/Home";
 import Login from "./Components/PrivateLoginSystem/Login/Login";
 import PlacedOrder from "./Components/PlacedOrderPage/PlacedOrder/PlacedOrder";
 import PrivateRoute from "./Components/PrivateLoginSystem/PrivateRoute/PrivateRoute";
+import About from "./Components/HomePage/About/About";
+import Contact from "./Components/HomePage/Contact/Contact";
 
 export const UserContext = createContext();
 function App() {
@@ -35,6 +37,12 @@ function App() {
             <PrivateRoute path="/admin">
               <Admin></Admin>
             </PrivateRoute>
+            <Route path="/aboutUs">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
             
 
           </Switch>

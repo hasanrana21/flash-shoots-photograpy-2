@@ -9,7 +9,7 @@ const ManageServicesDetails = ({manageService}) => {
     const handleDeleteService = deleteId => {
         console.log(deleteId)
 
-        fetch('http://localhost:8050/delete/' + deleteId, {
+        fetch('https://peaceful-mesa-78217.herokuapp.com/delete/' + deleteId, {
             method: 'DELETE',
         })
         .then(res => res.json())

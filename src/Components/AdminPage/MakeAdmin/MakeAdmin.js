@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         console.log(data);
 
-        fetch('http://localhost:8050/addAdmin', {
+        fetch('https://peaceful-mesa-78217.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: {'Content-Type' : 'Application/json'},
             body: JSON.stringify(data)

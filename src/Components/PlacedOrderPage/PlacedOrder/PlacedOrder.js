@@ -11,14 +11,14 @@ const PlacedOrder = () => {
     const [serviceData, setServiceData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8050/getServiceData')
+        fetch('https://peaceful-mesa-78217.herokuapp.com/getServiceData')
         .then(res => res.json())
         .then(data => {
             console.log(data);
             setServiceData(data);
         })
     }, [])
-    const userOrdered = serviceData.find(ordered => ordered._id === id);
+    const userOrdered = serviceData.find(ordered => ordered._id === id) || {};
     console.log(userOrdered);
     return (
         <div className="d-flex align-items-start">

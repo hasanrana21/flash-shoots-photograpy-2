@@ -6,7 +6,7 @@ const ManageServices = () => {
     const [manageServiceList, setManageServiceList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8050/getServiceData')
+        fetch('https://peaceful-mesa-78217.herokuapp.com/getServiceData')
         .then(res => res.json())
         .then(data => setManageServiceList(data));
     }, [])

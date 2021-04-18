@@ -18,27 +18,27 @@ import banner5 from '../../../images/banner5.jpg';
                     <div className="slider-image">
                         <img src={banner3} className="d-block w-100" alt="..."/>
                     </div>
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                    <div className="carousel-caption banner-text d-none d-md-block">
+                        <h3 style={{marginTop: '-30%'}}>Ready to take your Beyond your Imagination</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sint officiis tenetur culpa odit praesentium laboriosam magnam nulla, corporis maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iure. </p>
                     </div>
                 </div>
                 <div className="carousel-item">
                     <div className="slider-image">
                         <img src={banner4} className="d-block w-100" alt="..."/>
                     </div>
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                    <div className="carousel-caption banner-text d-none d-md-block">
+                        <h3 style={{marginTop: '-30%'}}>A Picture is worth a Thousands word</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sint officiis tenetur culpa odit praesentium laboriosam magnam nulla, corporis maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iure. </p>
                     </div>
                 </div>
                 <div className="carousel-item">
                     <div className="slider-image">
                         <img src={banner5} className="d-block w-100" alt="..."/>
                     </div>
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                    <div className="carousel-caption banner-text d-none d-md-block">
+                        <h3 style={{marginTop: '-30%'}}>Every Moment of your life is Beautiful</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem sint officiis tenetur culpa odit praesentium laboriosam magnam nulla, corporis maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, iure. </p>
                     </div>
                 </div>
             </div>

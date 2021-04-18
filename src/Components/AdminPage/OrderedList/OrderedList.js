@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import OrderedListDetails from '../OrderedListDetails/OrderedListDetails';
 import './OrderedList.css';
 
-const OrderedList = ({allOrderedList}) => {
+const OrderedList = () => {
+    const [allOrderedList, setAllOrderedList] = useState([]);
+
+    useEffect(() => {
+        fetch('https://peaceful-mesa-78217.herokuapp.com/getOrdered')
+        .then(res => res.json())
+        .then(result => setAllOrderedList(result))
+    }, [])
     return (
         <div className="admin-ordered-list">
             <div className="row admin-ordered-title">

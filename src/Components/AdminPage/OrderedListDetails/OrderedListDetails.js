@@ -12,7 +12,7 @@ const OrderedListDetails = ({allOrder}) => {
         }
         console.log(updateStatus)
 
-        fetch('http://localhost:8050/updateOrder', {
+        fetch('https://peaceful-mesa-78217.herokuapp.com/updateOrder', {
             method: 'POST',
             headers: {'Content-Type' : 'Application/json'},
             body: JSON.stringify({updateStatus: updateStatus, updateID: allOrder._id})

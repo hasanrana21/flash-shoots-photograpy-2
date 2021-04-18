@@ -19,7 +19,7 @@ const ReviewSend = () => {
         }
         console.log(reviewCard);
 
-        fetch('http://localhost:8050/addReview', {
+        fetch('https://peaceful-mesa-78217.herokuapp.com/addReview', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(reviewCard)
@@ -45,6 +45,7 @@ const ReviewSend = () => {
           .catch(function (error) {
             console.log(error);
           });
+          event.target.value = '';
     }
     return (
         <div>

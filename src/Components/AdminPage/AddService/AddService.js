@@ -19,7 +19,7 @@ const AddService = () => {
             image: uploadImage,
         }
         
-        fetch('http://localhost:8050/addServiceData', {
+        fetch('https://peaceful-mesa-78217.herokuapp.com/addServiceData', {
             method: 'POST',
             headers: {'Content-Type' : 'Application/json'},
             body: JSON.stringify(serviceCard)

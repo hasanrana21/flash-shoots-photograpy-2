@@ -37,7 +37,7 @@ const Booking = ({userOrdered}) => {
             servicePackage2: userOrdered.packageInfo2,
             servicePackage3: userOrdered.packageInfo3,
         }
-        fetch('http://localhost:8050/addOrder', {
+        fetch('https://peaceful-mesa-78217.herokuapp.com/addBooking', {
             method: 'POST',
             headers: {'Content-Type' : 'Application/json'},
             body: JSON.stringify(orderData)

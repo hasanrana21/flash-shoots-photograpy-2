@@ -6,11 +6,11 @@ const BookingList = () => {
     const [userOrderList, setUserOrderList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8050/getOrdered')
+        fetch('https://peaceful-mesa-78217.herokuapp.com/getOrdered')
         .then(res => res.json())
         .then(result => {
             console.log(result);
-            setUserOrderList(result)
+            setUserOrderList(result);
         })
     }, [])
     return (
