@@ -1,8 +1,8 @@
 import React from 'react';
 import './Banner.css';
-import banner1 from '../../../images/banner16.jpg';
-import banner2 from '../../../images/banner14.jpg';
-import banner3 from '../../../images/banner18.jpg';
+import banner1 from '../../../images/banner18.jpg';
+import banner2 from '../../../images/banner20.jpg';
+import banner3 from '../../../images/banner16.jpg';
 
 ;const Banner = () => {
     return (

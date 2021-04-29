@@ -2,7 +2,6 @@ import React from 'react';
 import './OrderedListDetails.css';
 
 const OrderedListDetails = ({allOrder}) => {
-
     const handleChangeStatus = event => {
         console.log(event.target.value)
         const statusData = event.target.value;

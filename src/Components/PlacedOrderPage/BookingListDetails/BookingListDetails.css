@@ -11,9 +11,9 @@
     margin: 15px 0;
 }
 .status{
-    background-color: green;
+    /* background-color: green; */
     color: #fff;
-    box-shadow: 2px 2px 8px lightgray;
+    /* box-shadow: 2px 2px 8px lightgray; */
     font-weight: 400;
     height: 40px;
     border-radius: 7px;

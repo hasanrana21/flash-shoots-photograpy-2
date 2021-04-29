@@ -13,7 +13,7 @@ const BookingListDetails = (props) => {
                     <img src={serviceImage} alt=""/>
                     <h5 className="py-2">TK.{price}/=</h5>
                 </div>
-                <div className="status">
+                <div  className="status" style={{backgroundColor: status ? 'green' : 'none', boxShadow: status ? '2px 2px 8px lightgrey' : 'none'}}>
                     <p>{status}</p>
                 </div>
             </div>

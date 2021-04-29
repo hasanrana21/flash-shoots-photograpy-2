@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import BookingListDetails from '../BookingListDetails/BookingListDetails';
 import './BookingList.css';
 
 const BookingList = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [userOrderList, setUserOrderList] = useState([]);
 
     useEffect(() => {
@@ -13,12 +15,17 @@ const BookingList = () => {
             setUserOrderList(result);
         })
     }, [])
+    const userItem = userOrderList.filter(userOrder => userOrder.email === loggedInUser.email);
+    console.log(userItem);
+    
     return (
+        <>
             <div className="row user-order-list-area">
                 {
-                    userOrderList.map(userOrder => <BookingListDetails userOrder={userOrder} key={userOrder._id}></BookingListDetails>)
+                    userItem.map(userOrder => <BookingListDetails userOrder={userOrder} key={userOrder._id}></BookingListDetails>)
                 }
             </div>
+        </>
     );
 };
 
