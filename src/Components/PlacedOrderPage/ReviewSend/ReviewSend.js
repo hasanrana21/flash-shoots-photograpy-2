@@ -32,6 +32,7 @@ const ReviewSend = () => {
 
 
     const handleReviewImage = event => {
+        console.log(event.target.files);
         console.log(event.target.files[0])
         const reviewImage = new FormData();
         reviewImage.set('key', 'd743345ed836835ea8ba69731659d88a')
