@@ -1,5 +1,5 @@
 APP Name = (Flash Shoots).
-Live Link = https://flash-shoots-complitesite-by-hasan.netlify.app/
+Live Link = https://flash-shoots-photography-fullstack.netlify.app/
 (Feature = 1/you can booking any services.
 2/purchesing any service by your card.
 3/you can see all your ordered.
