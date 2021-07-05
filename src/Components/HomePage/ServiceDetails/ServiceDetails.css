@@ -23,7 +23,7 @@
     cursor: pointer;
     transition: 1s;
 }
-.services-title-image img:hover{
+.services-card:hover img{
     transform: rotate(360deg);
 }
 .primary-button{
